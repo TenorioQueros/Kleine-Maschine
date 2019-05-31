@@ -1,0 +1,213 @@
+package view;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Color;
+import javax.swing.ImageIcon;
+import java.awt.Panel;
+import javax.swing.SwingConstants;
+import java.awt.Font;
+import javax.swing.JSlider;
+import javax.swing.JTable;
+import javax.swing.JTree;
+
+public class Principal extends JFrame {
+
+	private JPanel pnlFundo;
+
+	
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Principal index = new Principal();
+					index.setVisible(true);
+					index.setResizable(false) ;
+					 index.setUndecorated(true);
+						  
+							
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	
+   
+  
+	
+	public Principal() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 1031, 632);
+		pnlFundo = new JPanel();
+		pnlFundo.setForeground(new Color(255, 255, 255));
+		pnlFundo.setBorder(new EmptyBorder(5, 5, 5, 5));
+		this.setLocationRelativeTo(null);
+		setContentPane(pnlFundo);
+		pnlFundo.setLayout(null);
+		
+		
+		//layout frufru
+		JPanel barraDeFerramentas = new JPanel();
+		barraDeFerramentas.setBounds(-497, 0, 1065, 40);
+		barraDeFerramentas.setBackground(new Color(51, 51, 102));
+		pnlFundo.add(barraDeFerramentas);
+		
+		JLabel btnMostrarMais = new JLabel("");
+		btnMostrarMais.setVerticalAlignment(SwingConstants.TOP);
+		barraDeFerramentas.add(btnMostrarMais);
+		btnMostrarMais.setIcon(new ImageIcon("img/002-list.png"));
+	
+	
+			
+		
+		Panel barraDeFerramenta2 = new Panel();
+		barraDeFerramenta2.setBackground(new Color(51, 51, 102));
+		barraDeFerramenta2.setForeground(new Color(51, 51, 102));
+		barraDeFerramenta2.setBounds(268, 0, 747, 40);
+		pnlFundo.add(barraDeFerramenta2);
+		
+		JLabel lblPrincipal = new JLabel("Principal");
+		lblPrincipal.setVerticalAlignment(SwingConstants.BOTTOM);
+		lblPrincipal.setForeground(new Color(204, 204, 204));
+		barraDeFerramenta2.add(lblPrincipal);
+		lblPrincipal.setFont(new Font("Arial", Font.PLAIN, 25));
+		
+		final Panel menuMaximizadoo = new Panel();
+		menuMaximizadoo.setBackground(new Color(0, 51, 102));
+		menuMaximizadoo.setBounds(0, 21, 232, 572);
+		pnlFundo.add(menuMaximizadoo);
+		menuMaximizadoo.setVisible(false);
+		
+					
+		
+		JLabel divisao = new JLabel("___________________________________");
+		menuMaximizadoo.add(divisao);
+		
+		JLabel lblVazia = new JLabel("   ");
+		menuMaximizadoo.add(lblVazia);
+		JLabel lblVazia1 = new JLabel("   ");
+		menuMaximizadoo.add(lblVazia1);
+		JLabel lblVazia2 = new JLabel("  ");
+		menuMaximizadoo.add(lblVazia2);
+		
+		JLabel divisao1 = new JLabel("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
+		menuMaximizadoo.add(divisao1);
+		JLabel lblVazia3 = new JLabel("  ");
+		menuMaximizadoo.add(lblVazia3);	
+		
+		//botao monitoramento maquina
+		JLabel btnMonitoramentoMaquina = new JLabel(" Monitoramento Máquina ");
+		btnMonitoramentoMaquina.setVerticalAlignment(SwingConstants.TOP);
+		btnMonitoramentoMaquina.setForeground(new Color(204, 204, 204));
+		menuMaximizadoo.add(btnMonitoramentoMaquina);
+		JLabel lblVazia4 = new JLabel("  ");
+		menuMaximizadoo.add(lblVazia4);
+		
+		//botao monitoramento transações
+		JLabel divisao2 = new JLabel("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
+		menuMaximizadoo.add(divisao2);
+		JLabel lblVazia5 = new JLabel("  ");
+		menuMaximizadoo.add(lblVazia5);	
+		JLabel btnMonitoramentoTransacoes = new JLabel(" Monitoramento Transações ");
+		btnMonitoramentoTransacoes.setForeground(new Color(204, 204, 204));
+		menuMaximizadoo.add(btnMonitoramentoTransacoes);
+
+		//botao relatório
+		JLabel divisao8 = new JLabel("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
+		menuMaximizadoo.add(divisao8);
+		JLabel lblVazia7 = new JLabel("  ");
+		menuMaximizadoo.add(lblVazia7);	
+		JLabel btnRelatório = new JLabel(" Relatórios ");
+		btnRelatório.setForeground(new Color(204, 204, 204));
+		menuMaximizadoo.add(btnRelatório);
+		JLabel lblVazia8 = new JLabel("  ");
+		menuMaximizadoo.add(lblVazia8);
+		
+		//botao ajuda
+				JLabel divisao9 = new JLabel("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
+				menuMaximizadoo.add(divisao9);
+				JLabel lblVazia9 = new JLabel("  ");
+				menuMaximizadoo.add(lblVazia7);	
+				JLabel btnHelp = new JLabel(" Ajuda ");
+				btnHelp.setForeground(new Color(204, 204, 204));
+				menuMaximizadoo.add(btnHelp);
+				JLabel lblVazia10 = new JLabel("  ");
+				menuMaximizadoo.add(lblVazia10);
+				
+				
+				//botao sair
+				JLabel divisao10 = new JLabel("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
+				menuMaximizadoo.add(divisao10);
+				JLabel lblVazia11 = new JLabel("  ");
+			
+				JLabel btnSair = new JLabel("Sair");
+				btnSair.setForeground(new Color(204, 204, 204));
+				btnHelp.setForeground(new Color(204, 204, 204));
+				menuMaximizadoo.add(btnSair);
+				
+				JLabel label = new JLabel("");
+				label.setIcon(new ImageIcon("C:\\Users\\uppda\\eclipse-workspace\\Kleine_Maschine_System\\img\\fundo.png"));
+				label.setBounds(0, 0, 1015, 593);
+				pnlFundo.add(label);
+				
+					//metodos
+			//maximizar menor
+				
+				btnMostrarMais.addMouseListener((MouseListener) new MouseAdapter() {
+				public void mouseClicked(MouseEvent e) {
+			    menuMaximizadoo.setVisible(true);  
+			          
+			        }
+			    });
+				//ffazendo chamadas das janelas
+				//janela de monitoramento maquina
+				btnMonitoramentoMaquina.addMouseListener((MouseListener) new MouseAdapter() {
+					 
+			        public void mouseClicked(MouseEvent e) {
+			        	 Maquina maquina = new Maquina();  
+			        	 maquina.setVisible(true);  
+			             dispose();
+			        }
+			        
+			    });
+				//janela de monitoramento transações
+				btnMonitoramentoTransacoes.addMouseListener((MouseListener) new MouseAdapter() {
+					 
+			        public void mouseClicked(MouseEvent e) {
+			        	 Transacoes trans = new Transacoes();  
+			        	 trans.setVisible(true);  
+			             dispose();
+			        }
+				});
+				
+				//janela de relatório
+				btnRelatório.addMouseListener((MouseListener) new MouseAdapter() {
+					 
+			        public void mouseClicked(MouseEvent e) {
+			        	 Relatorio relat = new Relatorio();  
+			        	 relat.setVisible(true);  
+			             dispose();
+			        }
+				});
+				//janela de monitoramento transações
+				btnSair.addMouseListener((MouseListener) new MouseAdapter() {
+					 
+			        public void mouseClicked(MouseEvent e) {
+			        				             dispose();
+			        }
+				});
+	}
+}
