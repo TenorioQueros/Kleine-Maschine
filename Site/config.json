@@ -1,0 +1,24 @@
+{    
+"database":
+ {
+    "server": "kmaschine.database.windows.net",
+    "user": "bandtec",
+    "password": "@Bacons2",
+    "database": "KleineMaschine",
+    "options": 
+		{
+            
+			"encrypt": true
+			
+        }
+    },
+   
+    "security":
+	
+	
+	{
+	
+        "key": "CHAVE_SEGURANCA"
+		
+    }
+}
