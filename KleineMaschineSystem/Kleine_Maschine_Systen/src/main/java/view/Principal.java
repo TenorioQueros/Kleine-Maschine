@@ -229,7 +229,8 @@ public class Principal extends JFrame
 
 		final JLabel btnSair = new JLabel("");
 		btnSair.setVisible(true);
-		btnSair.setBounds(1, 235, 225, 52);
+		btnSair.setBounds(1, 120, 225, 52);
+		//btnSair.setBounds(1, 235, 225, 52);
 		menu.add(btnSair);
 
 		JLabel label = new JLabel("");
@@ -283,25 +284,24 @@ public class Principal extends JFrame
 
 			}
 		});
-		btnRelatorio.addMouseListener((MouseListener) new MouseAdapter() {
+		//btnRelatorio.addMouseListener((MouseListener)new MouseAdapter() {
+		
+		//public void mouseClicked(MouseEvent e) {
+			//Relatorio relat = new Relatorio();
+			//relat.setVisible(true);
+			//dispose();
 
-			public void mouseClicked(MouseEvent e) {
-				Relatorio relat = new Relatorio();
-				relat.setVisible(true);
-				dispose();
+//}
+//});
+//		btnAjuda.addMouseListener((MouseListener)new MouseAdapter() {
+		
+//			public void mouseClicked(MouseEvent e) {
+//			Ajuda relat = new Ajuda();
+	//		relat.setVisible(true);
+		//	dispose();
 
-			}
-		});
-		btnAjuda.addMouseListener((MouseListener) new MouseAdapter() {
-
-			public void mouseClicked(MouseEvent e) {
-				Relatorio relat = new Relatorio();
-				relat.setUndecorated(true);
-				relat.setVisible(true);
-				dispose();
-
-			}
-		});
+//}
+//});
 
 		btnSair.addMouseListener((MouseListener) new MouseAdapter() {
 

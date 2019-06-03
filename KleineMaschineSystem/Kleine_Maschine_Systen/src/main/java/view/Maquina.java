@@ -25,7 +25,7 @@ public class Maquina extends JFrame {
 					Maquina maquina = new Maquina();
 					maquina.setUndecorated(true);
 					maquina.setVisible(true);
-					maquina.setResizable(true) ;
+					maquina.setResizable(false) ;
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -119,7 +119,8 @@ public class Maquina extends JFrame {
 		
 		final JLabel btnSair = new JLabel("");
 		btnSair.setVisible(true);
-		btnSair.setBounds(1, 235, 225, 52);
+		btnSair.setBounds(1, 120, 225, 52);
+		//btnSair.setBounds(1, 235, 225, 52);
 		menu.add(btnSair);
 		
 		JLabel label = new JLabel("");
@@ -139,6 +140,7 @@ public class Maquina extends JFrame {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
+				relat.setUndecorated(true);
 				relat.setVisible(true);
 				dispose();
 
@@ -183,28 +185,25 @@ public class Maquina extends JFrame {
 						
 					}
 				});
-				btnRelatorio.addMouseListener((MouseListener)new MouseAdapter() {
-	
-					public void mouseClicked(MouseEvent e) {
-						Relatorio relat = new Relatorio();
-						relat.setUndecorated(true);
-						relat.setVisible(true);
-						dispose();
-		
-	}
-});	
+				//btnRelatorio.addMouseListener((MouseListener)new MouseAdapter() {
 				
-			btnAjuda.addMouseListener((MouseListener)new MouseAdapter() {
-					
-					public void mouseClicked(MouseEvent e) {
-						Ajuda ajud = new Ajuda();
-						ajud.setUndecorated(true);
-						ajud.setVisible(true);
-						dispose();
-		
-	}
-});
-			btncpu.addMouseListener((MouseListener)new MouseAdapter() {
+				//public void mouseClicked(MouseEvent e) {
+					//Relatorio relat = new Relatorio();
+					//relat.setVisible(true);
+					//dispose();
+	
+//}
+//});
+//		btnAjuda.addMouseListener((MouseListener)new MouseAdapter() {
+				
+	//			public void mouseClicked(MouseEvent e) {
+		//			Ajuda relat = new Ajuda();
+			//		relat.setVisible(true);
+				//	dispose();
+	
+//}
+//});
+				btncpu.addMouseListener((MouseListener)new MouseAdapter() {
 				
 				public void mouseClicked(MouseEvent e) {
 					CPU cpu = null;

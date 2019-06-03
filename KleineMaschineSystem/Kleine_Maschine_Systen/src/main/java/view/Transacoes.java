@@ -24,6 +24,7 @@ public class Transacoes extends JFrame {
 			public void run() {
 				try {
 					Transacoes trans = new Transacoes();
+					trans.setUndecorated(true);
 					trans.setVisible(true);
 					trans.setResizable(false);
 				} catch (Exception e) {
@@ -36,7 +37,7 @@ public class Transacoes extends JFrame {
 
 	public Transacoes() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1031, 632);
+		setBounds(100, 100, 1031, 600);
 		JPanel pnlFundo = new JPanel();
 		pnlFundo.setForeground(new Color(255, 255, 255));
 		pnlFundo.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -102,7 +103,8 @@ public class Transacoes extends JFrame {
 		
 		final JLabel btnSair = new JLabel("");
 		btnSair.setVisible(true);
-		btnSair.setBounds(1, 235, 225, 52);
+		btnSair.setBounds(1, 120, 225, 52);
+		//btnSair.setBounds(1, 235, 225, 52);
 		menu.add(btnSair);
 		
 		JLabel label = new JLabel("");
@@ -121,6 +123,7 @@ public class Transacoes extends JFrame {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
+				relat.setUndecorated(true);
 				relat.setVisible(true);
 				dispose();
 
@@ -147,6 +150,7 @@ public class Transacoes extends JFrame {
 					
 					public void mouseClicked(MouseEvent e) {
 						Maquina maquina = new Maquina();
+						maquina.setUndecorated(true);
 						maquina.setVisible(true);
 						dispose();
 						
@@ -156,29 +160,30 @@ public class Transacoes extends JFrame {
 					
 					public void mouseClicked(MouseEvent e) {
 						Transacoes trans = new Transacoes();
+						trans.setUndecorated(true);
 						trans.setVisible(true);
 						dispose();
 						
 					}
 				});
-				btnRelatorio.addMouseListener((MouseListener)new MouseAdapter() {
+				//btnRelatorio.addMouseListener((MouseListener)new MouseAdapter() {
 	
-					public void mouseClicked(MouseEvent e) {
-						Relatorio relat = new Relatorio();
-						relat.setVisible(true);
-						dispose();
+					//public void mouseClicked(MouseEvent e) {
+						//Relatorio relat = new Relatorio();
+						//relat.setVisible(true);
+						//dispose();
 		
-	}
-});
-			btnAjuda.addMouseListener((MouseListener)new MouseAdapter() {
+	//}
+//});
+	//		btnAjuda.addMouseListener((MouseListener)new MouseAdapter() {
 					
-					public void mouseClicked(MouseEvent e) {
-						Ajuda relat = new Ajuda();
-						relat.setVisible(true);
-						dispose();
+		//			public void mouseClicked(MouseEvent e) {
+			//			Ajuda relat = new Ajuda();
+				//		relat.setVisible(true);
+					//	dispose();
 		
-	}
-});
+	//}
+//});
 			
 			btnSair.addMouseListener((MouseListener)new MouseAdapter() {
 				
