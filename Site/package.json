@@ -14,5 +14,6 @@
     "moment-timezone": "^0.5.25",
     "morgan": "~1.9.1",
     "mssql": "^5.1.0"
+	"nodeman":"1.19.1"
   }
 }

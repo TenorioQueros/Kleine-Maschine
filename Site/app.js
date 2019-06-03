@@ -21,9 +21,9 @@ app.set('trust proxy', 1);
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
+//app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(session({
+/*app.use(session({
   secret: 'lalala',
   resave: false,
   saveUninitialized: true,
@@ -32,7 +32,7 @@ app.use(session({
     secure: 'auto',
     maxAge: new Date(Date.now() + (3600000))
  }
-}));
+}));*/
 
 app.use((req, res, next) => {
   next();
